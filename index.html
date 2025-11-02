@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+      <source src="imagen/fondo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <div class="welcome-section">
+            <!-- Botón REGISTRARSE eliminado -->
+        </div>
+        <div class="form-section">
+            <form id="loginForm" class="active">
+                <h2>Welcome to Sports Competitions!</h2>
+                <div class="input-field">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                </div>
+                <div class="options">
+                    <label><input type="checkbox" id="rememberMe"> Remember me</label>
+                    <a href="#" class="forgot">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn primary">Sign In</button>
+                <!-- Enlace pequeño debajo del botón Sign In -->
+                <small style="display:block; margin:10px 0 0 0; color:#555; font-size:0.92em; text-align:left;">
+                  Don't have an account?
+                  <a href="#" id="signUpLink" style="color:#6C23A2; text-decoration:underline; font-weight:500;">Sign Up</a>
+                </small>
+                <div class="divider"><span>or sign in with</span></div>
+                <div class="social-login">
+                  <button type="button" class="social-btn google"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google">Google</button>
+                  <button type="button" class="social-btn github"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">GitHub</button>
+                  <button type="button" class="social-btn facebook"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook">Facebook</button>
+                </div>
+            </form>
+            <form id="signupForm">
+                <h2>Create an account</h2>
+                <div class="input-field">
+                    <input type="email" id="signupEmail" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="signupPassword2" placeholder="Confirm password" required>
+                </div>
+                <button type="submit" class="btn primary">Accept</button>
+                <div class="divider"><span>o Sign In</span></div>
+                <button type="button" class="btn secondary" id="toSignIn">Sign In</button>
+            </form>
+        </div>
+    </div>
+    <div id="forgotModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h3>Forgot your password?</h3>
+        <p>Enter your email address and we'll send you a link to reset your password.</p>
+        <form id="forgotForm">
+          <input type="email" id="forgotEmail" placeholder="Email" required>
+          <button type="submit" class="btn primary" style="width:100%;margin-top:16px;">Send Reset Link</button>
+        </form>
+        <div id="forgotMsg" class="modal-msg"></div>
+      </div>
+    </div>
+    <script src="js/form.js"></script>
+</body>
+
+</html>
